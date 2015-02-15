@@ -7,67 +7,37 @@
 </div>
 <div class="container">
   <div class="list-group">
-    <div class="list-group-item">
-      <div class="col-md-1">
-        <a href="#" class="btn btn-default"><i class="glyphicon glyphicon-ok"></i></a>
-      </div>
-      <div class="col-md-offset-1">
-        <h4 class="list-group-item-heading">
-          <a href="http://blog.comnect.jp.net/blog/120" target="_blank">laravel-elixirにタスク追加する方法(タブ ->
-            スペース変換など)</a>
-        </h4>
-        <ul class="list-inline">
-          <li>
-            <a href="#" class="btn btn-default btn-xs">PHP</a>
-            <a href="#" class="btn btn-default btn-xs">Scala</a>
-            <a href="#" class="btn btn-default btn-xs">Play framework</a>
-            <a href="#" class="btn btn-default btn-xs">Rails</a>
-            <a href="#" class="btn btn-default btn-xs">Vagrant</a>
-            <a href="#" class="btn btn-default btn-xs">Swift</a>
-            <a href="#" class="btn btn-default btn-xs">CentOS</a>
-            <a href="#" class="btn btn-default btn-xs">HTML</a>
-            <a href="#" class="btn btn-default btn-xs">Objective-C</a>
-            <a href="#" class="btn btn-default btn-xs">CSS</a>
-          </li>
-        </ul>
-        <p>
-          <span>8クリップ</span>
-          <img class="img-circle"
-               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc4rXaPhKVgQfzuU1zwD6TJvaE9x1E184vrqYMCN1Hb-EgNEjd">
-          <a href="http://blog.comnect.jp.net/" target="_blank">Ytake Blog.</a>
-        </p>
-      </div>
-    </div>
-    <div class="list-group-item">
-      <div class="col-md-1">
-        <a href="#" class="btn btn-info"><i class="glyphicon glyphicon-ok"></i></a>
-      </div>
-      <div class="col-md-offset-1">
-        <h4 class="list-group-item-heading">
-          <a href="http://blog.comnect.jp.net/blog/120" target="_blank">laravel-elixirにタスク追加する方法(タブ ->
-            スペース変換など)</a>
-        </h4>
-        <ul class="list-inline">
-          <p>
-            <a href="#" class="btn btn-default btn-xs">PHP</a>
-            <a href="#" class="btn btn-default btn-xs">Scala</a>
-            <a href="#" class="btn btn-default btn-xs">Play framework</a>
-            <a href="#" class="btn btn-default btn-xs">Rails</a>
-            <a href="#" class="btn btn-default btn-xs">Vagrant</a>
-            <a href="#" class="btn btn-default btn-xs">Swift</a>
-            <a href="#" class="btn btn-default btn-xs">CentOS</a>
-            <a href="#" class="btn btn-default btn-xs">HTML</a>
-            <a href="#" class="btn btn-default btn-xs">Objective-C</a>
-            <a href="#" class="btn btn-default btn-xs">CSS</a>
-          </p>
-        </ul>
-        <p>
-          <span class="">8クリップ</span>
-          <img class="img-circle"
-               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc4rXaPhKVgQfzuU1zwD6TJvaE9x1E184vrqYMCN1Hb-EgNEjd">
-          <a href="http://blog.comnect.jp.net/" target="_blank">Ytake Blog.</a>
-        </p>
-      </div>
-    </div>
+    <% @articles.each do |article| %>
+        <div class="list-group-item">
+          <div class="col-md-1">
+            <a href="#" class="btn btn-default"><i class="glyphicon glyphicon-ok"></i></a>
+          </div>
+          <div class="col-md-offset-1">
+            <h4 class="list-group-item-heading">
+              <a href="<%= article.url %>" target="_blank"><%= article.name %></a>
+            </h4>
+            <!--<ul class="list-inline">-->
+              <!--<li>-->
+                <!--<a href="#" class="btn btn-default btn-xs">PHP</a>-->
+                <!--<a href="#" class="btn btn-default btn-xs">Scala</a>-->
+                <!--<a href="#" class="btn btn-default btn-xs">Play framework</a>-->
+                <!--<a href="#" class="btn btn-default btn-xs">Rails</a>-->
+                <!--<a href="#" class="btn btn-default btn-xs">Vagrant</a>-->
+                <!--<a href="#" class="btn btn-default btn-xs">Swift</a>-->
+                <!--<a href="#" class="btn btn-default btn-xs">CentOS</a>-->
+                <!--<a href="#" class="btn btn-default btn-xs">HTML</a>-->
+                <!--<a href="#" class="btn btn-default btn-xs">Objective-C</a>-->
+                <!--<a href="#" class="btn btn-default btn-xs">CSS</a>-->
+              <!--</li>-->
+            <!--</ul>-->
+            <p>
+              <span>8クリップ</span>
+              <img class="img-circle"
+                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc4rXaPhKVgQfzuU1zwD6TJvaE9x1E184vrqYMCN1Hb-EgNEjd">
+              <a href="blogs/<%= article.blog_id %>"><%= article.blog.name %></a>
+            </p>
+          </div>
+        </div>
+    <% end %>
   </div>
 </div>
