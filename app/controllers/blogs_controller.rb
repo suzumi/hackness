@@ -10,8 +10,8 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-    #FIXME:ハードコード
-    @blog = Blog.find(1)
+    @id = params[:id]
+    @blog = Blog.find(@id)
     @articles = @blog.articles
   end
 
