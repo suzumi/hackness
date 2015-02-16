@@ -2,13 +2,27 @@
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <div class="thumbnail">
-        <img src="http://dummyimage.com/800x100/eee/fff"
-             alt="...">
+        <!--<img src="http://dummyimage.com/800x100/eee/fff"-->
+             <!--alt="...">-->
 
         <div class="caption">
-          <h3><a href="<%= @blog.url %>"><%= @blog.name %></a></h3>
+          <h3><a href="<%= @blog.url %>" target="_blank"><%= @blog.name %></a></h3>
 
           <p>WebデザインやWebサイト制作、最新のWeb業界情報などを紹介していくサイト。</p>
+          <ul class="list-inline">
+            <li>
+              <a href="#" class="btn btn-default btn-xs">PHP</a>
+              <a href="#" class="btn btn-default btn-xs">Scala</a>
+              <a href="#" class="btn btn-default btn-xs">Play framework</a>
+              <a href="#" class="btn btn-default btn-xs">Rails</a>
+              <a href="#" class="btn btn-default btn-xs">Vagrant</a>
+              <a href="#" class="btn btn-default btn-xs">Swift</a>
+              <a href="#" class="btn btn-default btn-xs">CentOS</a>
+              <a href="#" class="btn btn-default btn-xs">HTML</a>
+              <a href="#" class="btn btn-default btn-xs">Objective-C</a>
+              <a href="#" class="btn btn-default btn-xs">CSS</a>
+            </li>
+          </ul>
           <p class="text-right"><a href="#" class="btn btn-success" role="button">+ このブログをフィード</a></p>
         </div>
       </div>
