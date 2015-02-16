@@ -17,3 +17,9 @@
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
+
+<% @articles.each do |article| %>
+<p>
+  <a href="<%= article.url %>" target="_blank"><%= article.name %></a>
+</p>
+<% end %>
