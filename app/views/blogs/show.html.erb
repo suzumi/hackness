@@ -10,9 +10,11 @@
 
           <p><%= @blog.blog_description %></p>
           <ul class="list-inline">
+            <% @tags.each do |tag| %>
             <li>
-              <a href="#" class="btn btn-default btn-xs"><%= @tags.name %></a>
+              <a href="#" class="btn btn-default btn-xs"><%= tag.name %></a>
             </li>
+            <% end %>
           </ul>
           <p class="text-right"><a href="#" class="btn btn-success" role="button">+ このブログをフィード</a></p>
         </div>
