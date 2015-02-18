@@ -8,19 +8,10 @@
         <div class="caption">
           <h3><a href="<%= @blog.url %>" target="_blank"><%= @blog.name %></a></h3>
 
-          <p>WebデザインやWebサイト制作、最新のWeb業界情報などを紹介していくサイト。</p>
+          <p><%= @blog.blog_description %></p>
           <ul class="list-inline">
             <li>
-              <a href="#" class="btn btn-default btn-xs">PHP</a>
-              <a href="#" class="btn btn-default btn-xs">Scala</a>
-              <a href="#" class="btn btn-default btn-xs">Play framework</a>
-              <a href="#" class="btn btn-default btn-xs">Rails</a>
-              <a href="#" class="btn btn-default btn-xs">Vagrant</a>
-              <a href="#" class="btn btn-default btn-xs">Swift</a>
-              <a href="#" class="btn btn-default btn-xs">CentOS</a>
-              <a href="#" class="btn btn-default btn-xs">HTML</a>
-              <a href="#" class="btn btn-default btn-xs">Objective-C</a>
-              <a href="#" class="btn btn-default btn-xs">CSS</a>
+              <a href="#" class="btn btn-default btn-xs"><%= @tags.name %></a>
             </li>
           </ul>
           <p class="text-right"><a href="#" class="btn btn-success" role="button">+ このブログをフィード</a></p>
@@ -39,7 +30,7 @@
       </div>
       <div class="media-body">
         <h4 class="media-heading"><a href="<%= article.url %>" target="_blank"><%= article.name %></a></h4>
-        WebクリエイターボックスのTwitter: @webcreatorboxでは毎日Webに関する記事や美しいデザイン・写真などを紹介しています。その中で今週人気だったつぶやきトップ10を紹介します。見逃してしまった人はこちらでチェック！まだフォローしてない人はお気軽にフォローしてみてくださいね！
+        <%= article.article_description %>
       </div>
     </li>
     <% end %>

@@ -12,6 +12,7 @@ class BlogsController < ApplicationController
   def show
     @blog = Blog.find(params[:id])
     @articles = @blog.articles
+    @tags = @blog.tags
   end
 
   # GET /blogs/new
