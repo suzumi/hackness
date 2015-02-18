@@ -40,7 +40,7 @@ Article.create(
     ]
 )
 
-BlogTag.create(
+BlogTagRelation.create(
     [
         {blog_id: 1, tag_id: 1},
         {blog_id: 1, tag_id: 2},

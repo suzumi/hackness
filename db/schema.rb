@@ -13,18 +13,18 @@
 
 ActiveRecord::Schema.define(version: 20150215135939) do
 
-  create_table "blog_tags", force: :cascade do |t|
-    t.integer  "blog_id"
-    t.integer  "tag_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "articles", force: :cascade do |t|
     t.string   "name"
     t.text     "url"
     t.text     "article_description"
     t.integer  "blog_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "blog_tag_relations", force: :cascade do |t|
+    t.integer  "blog_id"
+    t.integer  "tag_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 20150215135939) do
     t.text     "url"
     t.text     "feed"
     t.text     "blog_description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "tags", force: :cascade do |t|
