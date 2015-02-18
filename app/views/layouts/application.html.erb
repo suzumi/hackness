@@ -29,5 +29,25 @@
 <%= render 'shared/header' %>
 <%= yield %>
 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/typeahead.js"></script>
+<script>
+    var engine = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        local: [{value: 'background-color'}, {value: 'bakabakabakabaka'}, {value: 'bbbbhhhh'}, {value: 'bjjdoakokdakadoa'}]
+    });
+
+    engine.initialize();
+
+    $('#tag-autocomplite').typeahead(null, {
+        name: 'tags',
+        source: engine.ttAdapter()
+    })
+
+</script>
 </body>
 </html>

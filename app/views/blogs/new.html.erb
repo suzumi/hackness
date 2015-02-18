@@ -1,5 +1,51 @@
-<h1>New Blog</h1>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">ブログ登録</h3>
+    </div>
+    <div class="panel-body">
 
-<%= render 'form' %>
 
-<%= link_to 'Back', blogs_path %>
+      <form action="/blogs" method="post">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6">
+              <input type="email" class="form-control" placeholder="ブログ名">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6">
+              <input type="email" class="form-control" placeholder="URL">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6">
+              <input type="email" class="form-control" placeholder="RSS">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6">
+              <input type="email" class="form-control" placeholder="メールアドレス">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-2">
+              <input type="text" id="tag-autocomplite" class="form-control" placeholder="タグを追加">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-success">登録する</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
