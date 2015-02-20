@@ -7,28 +7,25 @@
 
 
       <!--<form action="/blogs" method="post">-->
-        <%= form_tag('/blogs', method: :post) do %>
+      <%= form_for(@blog) do |f| %>
         <div class="form-group">
           <div class="row">
             <div class="col-md-6">
-              <%= text_field_tag :name, '' ,class: 'form-control', placeholder: 'ブログ名' %>
-              <!--<input type="text" class="form-control" placeholder="ブログ名">-->
+              <%= f.text_field :name, class: 'form-control', placeholder: 'ブログ名' %>
             </div>
           </div>
         </div>
         <div class="form-group">
           <div class="row">
             <div class="col-md-6">
-              <%= text_field_tag :name, '' ,class: 'form-control', placeholder: 'URL' %>
-              <!--<input type="text" class="form-control" placeholder="URL">-->
+              <%= f.text_field :url, class: 'form-control', placeholder: 'URL' %>
             </div>
           </div>
         </div>
         <div class="form-group">
           <div class="row">
             <div class="col-md-6">
-              <%= text_field_tag :name, '' ,class: 'form-control', placeholder: 'RSS' %>
-              <!--<input type="text" class="form-control" placeholder="RSS">-->
+              <%= f.text_field :feed, class: 'form-control', placeholder: 'RSS' %>
             </div>
           </div>
         </div>
@@ -42,14 +39,12 @@
         <div class="form-group">
           <div class="row">
             <div class="col-md-2">
-              <%= text_field_tag :name, '' ,class: 'form-control', id: 'tag-autocomplite',placeholder: 'タグを追加' %>
-              <!--<input type="text" id="tag-autocomplite" class="form-control" placeholder="タグを追加">-->
+              <%= f.text_field :feed, class: 'form-control', id: 'tag-autocomplite', placeholder: 'タグを追加' %>
             </div>
           </div>
         </div>
         <div class="col-md-2">
-          <!--<button type="submit" class="btn btn-success">登録する</button>-->
-          <%= submit_tag '送信' ,class: 'btn btn-success'%>
+          <%= f.submit '送信', class: 'btn btn-success'%>
         </div>
         <% end %>
       <!--</form>-->
