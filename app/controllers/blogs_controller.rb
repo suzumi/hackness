@@ -1,3 +1,6 @@
+# require "feedbag"
+require "feedjira"
+
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
@@ -26,7 +29,14 @@ class BlogsController < ApplicationController
   # POST /blogs
   # POST /blogs.json
   def create
-    @blog = Blog.new(blog_params)
+    @blog = Blog.create(blog_params)
+    p 'ここから先はarticles'
+    p @blog.articles.inspect
+    feed = Feedjira::Feed.fetch_and_parse(@blog.feed)
+    feed.entries.each do |entry|
+      @blog.articles.create(name: entry.title, url: entry.url, article_description: entry.summary)
+    end
+    binding.pry
 
     respond_to do |format|
       if @blog.save
@@ -71,6 +81,6 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:name, :url, :feed)
+      params.require(:blog).permit(:name, :url, :feed, :blog_description)
     end
 end
