@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 20150215135939) do
     t.text     "url"
     t.text     "article_description"
     t.integer  "blog_id"
+    t.datetime "published"
+    t.datetime "updated"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
   end
