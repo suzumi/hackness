@@ -30,11 +30,11 @@ class BlogsController < ApplicationController
   # POST /blogs.json
   def create
     @blog = Blog.create(blog_params)
-    p 'ここから先はarticles'
-    p @blog.articles.inspect
+    Feedjira::Feed.add_common_feed_element 'image'
     feed = Feedjira::Feed.fetch_and_parse(@blog.feed)
+    @blog.blog_description = feed.description
     feed.entries.each do |entry|
-      @blog.articles.create(name: entry.title, url: entry.url, article_description: entry.summary)
+      @blog.articles.create(name: entry.title, url: entry.url, article_description: entry.summary, published: entry.published, updated: entry.updated)
     end
     binding.pry
 
@@ -81,6 +81,6 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:name, :url, :feed, :blog_description)
+      params.require(:blog).permit(:name, :url, :feed)
     end
 end
