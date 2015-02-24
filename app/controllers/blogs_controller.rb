@@ -32,6 +32,7 @@ class BlogsController < ApplicationController
     @blog = Blog.create(blog_params)
     Feedjira::Feed.add_common_feed_element 'image'
     feed = Feedjira::Feed.fetch_and_parse(@blog.feed)
+    @blog.last_modified = feed.last_modified
     @blog.blog_description = feed.description
     feed.entries.each do |entry|
       @blog.articles.create(name: entry.title, url: entry.url, article_description: entry.summary, published: entry.published, updated: entry.updated)
