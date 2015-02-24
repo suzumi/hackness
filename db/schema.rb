@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20150215135939) do
     t.text     "url"
     t.text     "feed"
     t.text     "blog_description"
+    t.datetime "last_modified"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
