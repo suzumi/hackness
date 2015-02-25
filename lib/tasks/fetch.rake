@@ -9,8 +9,8 @@ namespace :fetch do
     blogs.each do |blog|
       last_entry_url = blog.articles.order("published DESC").first.url
       feed.feed_url = blog.url
-      # feed.last_modified = Time.parse(blog.last_modified.to_s).to_datetime
-      feed.last_modified = DateTime.parse(blog.last_modified.to_s)
+      feed.last_modified = Time.zone.parse(blog.last_modified.to_s)
+      # feed.last_modified = DateTime.parse(blog.last_modified.to_s)
       last_entry = Feedjira::Parser::RSSEntry.new
       last_entry.url = last_entry_url
       feed.entries = [last_entry]
