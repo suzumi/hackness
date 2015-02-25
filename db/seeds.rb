@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+=begin
 Tag.create(
     [
         {name: 'PHP'},
@@ -59,3 +59,4 @@ BlogTagRelation.create(
         {blog_id: 3, tag_id: 10},
     ]
 )
+=end
