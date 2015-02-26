@@ -13,7 +13,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-    @articles = @blog.articles
+    @articles = @blog.articles.order("published DESC")
     @tags = @blog.tags
   end
 
@@ -37,7 +37,6 @@ class BlogsController < ApplicationController
     feed.entries.each do |entry|
       @blog.articles.create(name: entry.title, url: entry.url, article_description: entry.summary, published: entry.published, updated: entry.updated)
     end
-    binding.pry
 
     respond_to do |format|
       if @blog.save
