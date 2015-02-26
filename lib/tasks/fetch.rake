@@ -18,17 +18,19 @@ namespace :fetch do
 
       updated_feed = Feedjira::Feed.update(feed)
       if updated_feed.updated?
-        blog.last_modified = updated_feed.last_modified
+        # blog.last_modified = updated_feed.last_modified
         updated_feed.new_entries.each do |entry|
+          binding.pry
           blog.articles.create(
               name: entry.title,
               url: entry.url,
               article_description: entry.summary,
-              blog_id: blog.id,
               published: entry.published,
               updated: entry.updated
           )
+          blog.update_attribute(:last_modified, entry.published)
         end
+        binding.pry
       end
     end
   end
