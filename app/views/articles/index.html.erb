@@ -16,14 +16,14 @@
                 <!--<a href="#" class="btn btn-default"><i class="glyphicon glyphicon-ok"></i></a>-->
               </div>
               <div class="col-md-offset-1">
+                <small><%= article.published.strftime("%Y/%m/%d") %></small>
+                <p></p>
                 <h4 class="list-group-item-heading">
                   <a href="<%= article.url %>" target="_blank"><%= article.name %></a>
                 </h4>
 
                 <p>
                   <span>8クリップ</span>
-                  <img class="img-circle"
-                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc4rXaPhKVgQfzuU1zwD6TJvaE9x1E184vrqYMCN1Hb-EgNEjd">
                   <a href="blogs/<%= article.blog_id %>"><%= article.blog.name %></a>
                 </p>
               </div>
