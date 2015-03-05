@@ -21,24 +21,38 @@
       </div>
     </div>
   </div>
-  <ul class="media-list col-md-8 col-md-offset-2">
-    <% @articles.each do |article| %>
-    <li class="media">
-      <h4><small><%= article.published.strftime("%Y/%m/%d") %></small></h4>
-      <div class="media-left">
-        <a href="#">
-          <img class="media-object" src="http://dummyimage.com/200x100/EEE/fff" alt="...">
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading"><a href="<%= article.url %>" target="_blank"><%= truncate(article.name) %></a></h4>
-        <blockquote>
-          <p><%= truncate(article.article_description, length: 100) %></p>
-        </blockquote>
-      </div>
-    </li>
-    <% end %>
-  </ul>
+  <div class="row col-md-10 col-md-offset-1">
+    <div class="col-md-3 border-box" style="border: solid 1px">
+      .col-xs-4
+    </div>
+    <div class="col-md-3" style="border: solid 1px">
+      .col-xs-4
+    </div>
+    <div class="col-md-3" style="border: solid 1px">
+      .col-xs-4
+    </div>
+    <div class="col-md-3" style="border: solid 1px">
+      .col-xs-4
+    </div>
+  </div>
+  <!--<ul class="media-list col-md-8 col-md-offset-2">-->
+    <!--<% @articles.each do |article| %>-->
+    <!--<li class="media">-->
+      <!--<h4><small><%= article.published.strftime("%Y/%m/%d") %></small></h4>-->
+      <!--<div class="media-left">-->
+        <!--<a href="#">-->
+          <!--<img class="media-object" src="http://dummyimage.com/200x100/EEE/fff" alt="...">-->
+        <!--</a>-->
+      <!--</div>-->
+      <!--<div class="media-body">-->
+        <!--<h4 class="media-heading"><a href="<%= article.url %>" target="_blank"><%= truncate(article.name) %></a></h4>-->
+        <!--<blockquote>-->
+          <!--<p><%= truncate(article.article_description, length: 100) %></p>-->
+        <!--</blockquote>-->
+      <!--</div>-->
+    <!--</li>-->
+    <!--<% end %>-->
+  <!--</ul>-->
 
 </div>
 </div>
