@@ -31,30 +31,6 @@
         <% end %>
       </div>
     </div>
-    <!--人気-->
-    <div class="tab-pane" id="interest">
-      <div class="list-group">
-        <% @articles.each do |article| %>
-            <div class="list-group-item">
-              <div class="col-md-1">
-                <!--<a href="#" class="btn btn-default"><i class="glyphicon glyphicon-ok"></i></a>-->
-              </div>
-              <div class="col-md-offset-1">
-                <h4 class="list-group-item-heading">
-                  <a href="<%= article.url %>" target="_blank"><%= article.name %></a>
-                </h4>
-
-                <p>
-                  <span>8クリップ</span>
-                  <img class="img-circle"
-                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc4rXaPhKVgQfzuU1zwD6TJvaE9x1E184vrqYMCN1Hb-EgNEjd">
-                  <a href="blogs/<%= article.blog_id %>"><%= article.blog.name %></a>
-                </p>
-              </div>
-            </div>
-        <% end %>
-      </div>
-    </div>
     <!--マイフィード-->
     <div class="tab-pane" id="myfeed">
       <div class="list-group">
