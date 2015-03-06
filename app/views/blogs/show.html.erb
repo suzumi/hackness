@@ -16,6 +16,7 @@
   <!--http://bootsnipp.com/snippets/featured/thumbnail-caption-hover-effect-->
   <div class="row">
     <% @articles.each do |article| %>
+        <a href="<%= article.url %>" target="_blank">
         <div class="col-md-3 col-sm-4">
           <!--<div>-->
           <!--<h4>-->
@@ -30,16 +31,19 @@
           <!--</div>-->
           <div class="thumbnail">
             <div class="caption">
-              <h4>Thumbnail Headline</h4>
+              <h4><%= truncate(article.name) %></h4>
 
-              <p>short thumbnail description</p>
+              <p><%= truncate(article.article_description, length: 100) %></p>
 
-              <p><a href="" class="label label-danger" rel="tooltip" title="Zoom">Zoom</a>
-                <a href="" class="label label-default" rel="tooltip" title="Download now">Download</a></p>
             </div>
-            <img src="http://lorempixel.com/400/300/sports/1/" alt="...">
+            <div class="article-aria-box">
+              <small><%= article.published.strftime("%Y/%m/%d") %></small>
+            <!--<img src="http://lorempixel.com/400/300/sports/1/" alt="...">-->
+            <h4><%= truncate(article.name) %></h4>
+            </div>
           </div>
         </div>
+        </a>
     <% end %>
   </div>
 </div>
