@@ -12,7 +12,7 @@
   <ul class="timeline">
     <% @articles.each do |article| %>
     <li class="<%= cycle('', 'timeline-inverted') %>">
-      <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip" title="<%= article.published.strftime("%Y/%m/%d") %>" id=""></i></a></div>
+      <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-adjust" rel="tooltip" title="<%= article.published.strftime("%Y/%m/%d") %>" id=""></i></a></div>
       <div class="timeline-panel">
         <div class="timeline-heading">
           <!--<img class="img-responsive" src="http://lorempixel.com/1600/500/sports/2" />-->
@@ -23,8 +23,7 @@
         </div>
 
         <div class="timeline-footer">
-          <a><i class="glyphicon glyphicon-thumbs-up"></i></a>
-          <a><i class="glyphicon glyphicon-share"></i></a>
+          <a><i class="glyphicon glyphicon-heart-empty"></i></a>
           <a class="pull-right"><%= article.published.strftime("%Y/%m/%d") %></a>
         </div>
       </div>
