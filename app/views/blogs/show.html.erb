@@ -1,50 +1,54 @@
 <div class="container">
-  <div class="row">
-    <h3><a href="<%= @blog.url %>" target="_blank"><%= @blog.name %></a></h3>
-
+  <div class="page-header text-center">
+    <h1 id="timeline"><a href="<%= @blog.url %>" target="_blank"><%= @blog.name %></a></h1>
     <p><%= @blog.blog_description %></p>
-    <ul class="list-inline">
-      <% @tags.each do |tag| %>
-          <li>
-            <a href="#" class="btn btn-default btn-xs"><%= tag.name %></a>
-          </li>
-      <% end %>
-    </ul>
+    <% @tags.each do |tag| %>
+        <li>
+          <a href="#" class="btn btn-default btn-xs"><%= tag.name %></a>
+        </li>
+    <% end %>
     <p class="text-right"><a href="#" class="btn btn-success" role="button">+ このブログをフィード</a></p>
   </div>
-  <!--@see-->
-  <!--http://bootsnipp.com/snippets/featured/thumbnail-caption-hover-effect-->
-  <div class="row">
+  <ul class="timeline">
     <% @articles.each do |article| %>
-        <a href="<%= article.url %>" target="_blank">
-        <div class="col-md-3 col-sm-4">
-          <!--<div>-->
-          <!--<h4>-->
-          <!--<small><%= article.published.strftime("%Y/%m/%d") %></small>-->
-          <!--</h4>-->
-          <!--<div class="media-body">-->
-          <!--<h4 class="media-heading"><a href="<%= article.url %>" target="_blank"><%= truncate(article.name) %></a>-->
-          <!--</h4>-->
-
-          <!--<p><%= truncate(article.article_description, length: 100) %></p>-->
-          <!--</div>-->
-          <!--</div>-->
-          <div class="thumbnail">
-            <div class="caption">
-              <h4><%= truncate(article.name) %></h4>
-
-              <p><%= truncate(article.article_description, length: 100) %></p>
-
-            </div>
-            <div class="article-aria-box">
-              <small><%= article.published.strftime("%Y/%m/%d") %></small>
-            <!--<img src="http://lorempixel.com/400/300/sports/1/" alt="...">-->
-            <h4><%= truncate(article.name) %></h4>
-            </div>
-          </div>
+    <li class="<%= cycle('', 'timeline-inverted') %>">
+      <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip" title="<%= article.published.strftime("%Y/%m/%d") %>" id=""></i></a></div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <!--<img class="img-responsive" src="http://lorempixel.com/1600/500/sports/2" />-->
         </div>
-        </a>
+        <div class="timeline-body">
+          <p><b><a href="<%= article.url %>" target="_blank"><%= truncate(article.name, length: 200) %></a></b></p>
+          <p><%= truncate(article.article_description, length: 150, escape: false) %></p>
+        </div>
+
+        <div class="timeline-footer">
+          <a><i class="glyphicon glyphicon-thumbs-up"></i></a>
+          <a><i class="glyphicon glyphicon-share"></i></a>
+          <a class="pull-right"><%= article.published.strftime("%Y/%m/%d") %></a>
+        </div>
+      </div>
+    </li>
+
+    <!--<li  class="timeline-inverted">-->
+      <!--<div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="11 hours ago via Twitter" id=""></i></a></div>-->
+      <!--<div class="timeline-panel">-->
+        <!--<div class="timeline-heading">-->
+          <!--&lt;!&ndash;<img class="img-responsive" src="http://lorempixel.com/1600/500/sports/2" />&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="timeline-body">-->
+          <!--<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>-->
+
+        <!--</div>-->
+
+        <!--<div class="timeline-footer">-->
+          <!--<a><i class="glyphicon glyphicon-thumbs-up"></i></a>-->
+          <!--<a><i class="glyphicon glyphicon-share"></i></a>-->
+          <!--<a class="pull-right">Continuar Lendo</a>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</li>-->
     <% end %>
-  </div>
-</div>
+    <li class="clearfix" style="float: none;"></li>
+  </ul>
 </div>
