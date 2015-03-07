@@ -11,7 +11,8 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap
-//= require typeahead
+//= require select2
 //= require_tree .
