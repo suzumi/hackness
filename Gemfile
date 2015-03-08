@@ -22,6 +22,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # 追加
 gem 'bower-rails'
+gem 'less-rails'
+gem 'therubyracer'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -35,6 +37,7 @@ gem 'bower-rails'
 gem 'ransack'
 gem 'jquery-turbolinks'
 gem 'select2-rails'
+gem 'twitter-bootstrap3-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
