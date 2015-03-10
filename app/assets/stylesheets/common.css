@@ -278,3 +278,22 @@
         left: 28px;
     }
 }
+
+.article-name{
+    font-size:14px;
+    font-weight: bold;
+}
+.comments-list .media{
+    border-bottom: 1px dotted #ccc;
+}
+
+.like-button {
+    top: 0;
+    right: 0;
+}
+
+
+
+.media {
+    margin-top: 0 !important;
+}
