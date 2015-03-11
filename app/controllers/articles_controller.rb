@@ -7,9 +7,15 @@ class ArticlesController < ApplicationController
     @articles = Article.order("published DESC")
   end
 
+  def ajax_articles
+    @articles = Article.order("published DESC")
+    render json: @articles
+  end
+
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @articles = Article.order("published DESC")
   end
 
   # GET /articles/new

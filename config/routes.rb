@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   root :to => 'articles#index'
   resources :blogs
 
-  resources :articles
+  resources :articles do
+    member do
+      get 'ajax_articles'
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
