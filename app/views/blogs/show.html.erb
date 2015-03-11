@@ -1,13 +1,14 @@
 <div class="container">
   <div class="page-header text-center">
-    <h1 id="timeline"><a href="<%= @blog.url %>" target="_blank"><%= @blog.name %></a></h1>
+    <h1 class="blogtitle" id="timeline"><a href="<%= @blog.url %>" target="_blank"><%= @blog.name %></a></h1>
     <p><%= @blog.blog_description %></p>
     <% @tags.each do |tag| %>
         <li>
           <a href="#" class="btn btn-default btn-xs"><%= tag.name %></a>
         </li>
     <% end %>
-    <p class="text-right"><a href="#" class="btn btn-success" role="button">+ このブログをフィード</a></p>
+    <p class="feedbutton text-right">
+      <a href="#" class="btn btn-success" id="like-feed-blog" role="button"><i class="glyphicon glyphicon-plus">このブログをフィード</i></a></p>
   </div>
   <ul class="timeline">
     <% @articles.each do |article| %>
