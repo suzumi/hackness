@@ -20,7 +20,7 @@
         </div>
         <div class="timeline-body">
           <p><b><a href="<%= article.url %>" target="_blank"><%= truncate(article.name, length: 200) %></a></b></p>
-          <p><%= truncate(article.article_description, length: 150, escape: false) %></p>
+          <p><%= truncate(article.article_description, length: 150) %></p>
         </div>
 
         <div class="timeline-footer">
