@@ -295,8 +295,9 @@
 }
 
 .like-button > button > i {
-    height: 35px;
-    width: 25px;
+    /*color: #ff1493;*/
+    color: #000;
+    right: 7px;
 }
 
 .media {
