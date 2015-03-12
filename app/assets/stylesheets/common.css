@@ -287,19 +287,6 @@
     border-bottom: 1px dotted #ccc;
 }
 
-.like-button,
-.like-button > button {
-    height: 35px;
-    width: 25px;
-    background-color: #f3f3f3;
-}
-
-.like-button > button > i {
-    /*color: #ff1493;*/
-    color: #000;
-    right: 7px;
-}
-
 .media {
     margin-top: 0 !important;
 }
