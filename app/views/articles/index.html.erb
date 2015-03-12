@@ -20,14 +20,14 @@
                     <div class="media-body">
                       <p>
                         <small><%= article.published.strftime("%Y/%m/%d") %></small>
-                        <small class="pull-right">
-                          <button type="button" class="btn btn-link like-button">
+                        <span class="pull-right like-button">
+                          <button type="button" class="btn btn-link">
                             <i class="glyphicon glyphicon-heart-empty"></i></button>
-                        </small>
+                        </span>
                       </p>
                       <p class="media-heading article-name">
                         <a href="<%= article.url %>" target="_blank"><%= article.name %></p></a>
-                      <p>
+                      <p class="pull-right">
                         <small>Posted by</small>
                         <span><a href="blogs/<%= article.blog_id %>"><%= article.blog.name %></a></span>
                       </p>
