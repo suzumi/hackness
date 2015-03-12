@@ -352,6 +352,9 @@ nav {
     margin: 25px;
 }
 
+.media-body .btn-link {
+    color: #d3d3d3;
+}
 
 /* custom inclusion of right, left and below tabs */
 

@@ -24,6 +24,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bower-rails'
 gem 'less-rails'
 gem 'therubyracer'
+gem 'devise'
+# GitHub認証
+gem 'omniauth-github'
+# Twitter認証
+gem 'omniauth-twitter'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

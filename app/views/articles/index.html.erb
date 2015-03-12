@@ -73,9 +73,9 @@
       <!--サイドバー-->
       <div class="col-sm-3">
         <div class="list-group">
-          <a href="#" class="list-group-item">フィード</a>
-          <a href="#" class="list-group-item">イベント</a>
-          <a href="#" class="list-group-item">ブログ登録</a>
+          <%= link_to "フィード", root_path, class: 'list-group-item'%>
+          <%= link_to "イベント", root_path, class: 'list-group-item' %>
+          <%= link_to "ブログ登録", new_blog_path, class: 'list-group-item' %>
         </div>
       </div>
     </div>
