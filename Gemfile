@@ -25,6 +25,7 @@ gem 'bower-rails'
 gem 'less-rails'
 gem 'therubyracer'
 gem 'devise'
+gem 'omniauth'
 # GitHub認証
 gem 'omniauth-github'
 # Twitter認証

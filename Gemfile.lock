@@ -255,6 +255,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   less-rails
+  omniauth
   omniauth-github
   omniauth-twitter
   pg

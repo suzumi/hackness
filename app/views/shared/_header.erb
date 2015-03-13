@@ -16,6 +16,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><%= link_to "ブログ登録", new_blog_path %></li>
+        <li><%= link_to "Twiiterでログイン", user_omniauth_authorize_path(:twitter) %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <form class="navbar-form navbar-left" action="/api/search" role="search" method="get">
