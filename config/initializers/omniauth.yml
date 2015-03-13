@@ -1,0 +1,37 @@
+roduction: &production
+  facebook:
+    key: xxxxxxxxxxx
+    secret: XXXXXXXXXXXXXXXXXXXXXXXXX
+  github:
+    key: xxxxxxxxxxx
+    secret: XXXXXXXXXXXXXXXXXXXXXXXXX
+  google:
+    key: xxxxxxxxxxx
+    secret: XXXXXXXXXXXXXXXXXXXXXXXXX
+  hatena:
+    key: xxxxxxxxxxx
+    secret: XXXXXXXXXXXXXXXXXXXXXXXXX
+  linkedin:
+    key: xxxxxxxxxxx
+    secret: XXXXXXXXXXXXXXXXXXXXXXXXX
+  mixi:
+    key: xxxxxxxxxxx
+    secret: XXXXXXXXXXXXXXXXXXXXXXXXX
+  twitter:
+    key: 1cQE5Mm59erYAtOFGXQi9sO4Z
+    secret: SpVvYg4BbUvEUNGKgtdghl7TQ5UIVY8y3qIGlAvRlhw01Ex6Zg
+
+development: &development
+  <<: *production
+  facebook:
+    key: xxxxxxxxxxx
+    secret: XXXXXXXXXXXXXXXXXXXXXXXXX
+  github:
+    key: xxxxxxxxxxx
+    secret: XXXXXXXXXXXXXXXXXXXXXXXXX
+  mixi:
+    key: xxxxxxxxxxx
+    secret: XXXXXXXXXXXXXXXXXXXXXXXXX
+
+test:
+  <<: *development
