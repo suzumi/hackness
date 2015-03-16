@@ -13,8 +13,8 @@ class User < ActiveRecord::Base
           provider: auth.provider,
           email:    User.dummy_email(auth),
           password: Devise.friendly_token[0, 20],
-          Image: auth.info.image,
-          Name: auth.info.name
+          image: auth.info.image,
+          name: auth.info.name
       )
     end
 
