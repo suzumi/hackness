@@ -15,14 +15,16 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><%= link_to "ブログ登録", new_blog_path %></li>
+              <li><%= link_to "ブログ登録", new_blog_path %></li>
+              <li>
+                <form class="navbar-form navbar-left" action="/api/search" role="search" method="get">
+                  <div class="form-group">
+                    <input type="search" class="form-control" autocomplete="off" placeholder="キーワードで検索">
+                  </div>
+                </form>
+              </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <form class="navbar-form navbar-left" action="/api/search" role="search" method="get">
-                    <div class="form-group">
-                        <input type="search" class="form-control" autocomplete="off" placeholder="キーワードで検索">
-                    </div>
-                </form>
                 <% if user_signed_in? %>
                     <li><li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li></li>
                     <li class="dropdown">
@@ -39,7 +41,6 @@
                         </ul>
                     </li>
                 <% else %>
-                    <li><%= link_to "サインイン", new_user_registration_path %></li>
                     <li><%= link_to "ログイン", new_user_session_path %></li>
                 <% end %>
             </ul>
