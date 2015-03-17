@@ -41,25 +41,6 @@ ActiveRecord::Schema.define(version: 20150313173638) do
     t.datetime "updated_at",       null: false
   end
 
-  create_table "social_profiles", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "name"
-    t.string   "nickname"
-    t.string   "email"
-    t.string   "url"
-    t.string   "image_url"
-    t.string   "description"
-    t.text     "other"
-    t.text     "credentials"
-    t.text     "raw_info"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  add_index "social_profiles", ["user_id"], name: "index_social_profiles_on_user_id"
-
   create_table "tags", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
