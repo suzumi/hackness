@@ -420,11 +420,19 @@ nav {
 }
 
 /*新規登録*/
-/*.main,*/
-/*.btn-registration {*/
-    /*max-width: 380px !important;*/
-    /*margin: 0 auto;*/
-/*}*/
+.section-signup {
+    margin-bottom: 100px;
+}
+
+.section-intro {
+    height: 500px;
+    background-color: #313131;
+}
+
+.section-description {
+    height: 600px;
+    margin-bottom: 100px;
+}
 
 .btn-github > a,
 .btn-twitter > a {
