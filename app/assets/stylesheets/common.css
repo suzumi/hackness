@@ -1,4 +1,11 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+/*Navbarにロゴ画像をいれるとズレる問題→背景に指定する*/
+.navbar-brand {
+    background: url("logo1.png") no-repeat left center;
+    background-size: contain;
+    height: 50px;
+    width: 250px;
+}
 
 .top-container {
     margin-top: 50px;
