@@ -9,32 +9,35 @@
         <div class="tab-content">
           <!--新着-->
           <div class="tab-pane active" id="newarraival">
-            <div class="comments-list">
-              <% @articles.each do |article| %>
-                  <div class="media">
-                    <span class="media-left">
+            <div class="comments-list" id="articles">
+                <!--<%= render :partial => "articles" %>-->
+                <% @articles.each do |article| %>
+                    <div class="media">
+        <span class="media-left">
                       <!--<img src="http://lorempixel.com/40/40/people/1/">-->
                     </span>
 
-                    <div class="media-body">
-                      <p>
-                        <small><%= article.published.strftime("%Y/%m/%d") %></small>
+                        <div class="media-body">
+                            <p>
+                                <small><%= article.published.strftime("%Y/%m/%d") %></small>
                         <span class="pull-right like-button">
                           <button type="button" class="btn btn-link">
-                            <i class="glyphicon glyphicon-folder-open"></i></button>
+                              <i class="glyphicon glyphicon-folder-open"></i></button>
                         </span>
-                      </p>
-                      <p class="media-heading article-name">
-                        <a href="<%= article.url %>" target="_blank"><%= article.name %></p></a>
-                      <p class="pull-right">
-                        <small>Posted by</small>
-                        <span><a href="blogs/<%= article.blog_id %>"><%= article.blog.name %></a></span>
-                      </p>
+                            </p>
+                            <p class="media-heading article-name">
+                                <a href="<%= article.url %>" target="_blank"><%= article.name %></p></a>
+                            <p class="pull-right">
+                                <small>Posted by</small>
+                                <span><a href="blogs/<%= article.blog_id %>"><%= article.blog.name %></a></span>
+                            </p>
+                        </div>
                     </div>
-                  </div>
-              <% end %>
+                <% end %>
               <div class="btn-more text-center">
                 <a href="" class="btn btn-default btn-block">もっと見る</a>
+                  <%= link_to_next_page(@articles, 'もっと見る', :remote => true) %>
+                <!--<%= paginate @articles, :remote => true%>-->
               </div>
             </div>
           </div>

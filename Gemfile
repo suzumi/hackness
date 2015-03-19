@@ -30,6 +30,8 @@ gem 'omniauth'
 gem 'omniauth-github'
 # Twitter認証
 gem 'omniauth-twitter'
+# ページネーション
+gem 'kaminari'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
