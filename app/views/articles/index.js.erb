@@ -1,4 +1,1 @@
-//$("#articles").html("<%= j(render :partial => 'articles') %>");
-$("#articles").replaceWith("<%= escape_javascript(
-    link_to_next_page(@articles, 'もっと見る', remote: true, id: 'articles')
-) %>");
+$("#articles-list").append("<%= j(render :partial => 'articles') %>");
