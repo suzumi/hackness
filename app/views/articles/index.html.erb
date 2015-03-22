@@ -13,8 +13,7 @@
                 <%= render :partial => "articles" %>
             </div>
             <div class="btn-more text-center">
-              <!--<a href="" class="btn btn-default btn-block">もっと見る</a>-->
-              <%= link_to_next_page @articles, 'もっと見る', :remote => true, :params => params, :class => 'btn btn-default btn-block' %>
+              <%= link_to_next_page @articles, 'もっと見る', :remote => true, :class => 'btn btn-default btn-block', :id => 'view_more' %>
             </div>
           </div>
           <!--マイフィード-->

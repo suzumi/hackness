@@ -4,22 +4,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    # unless params[:page].nil?
-    #   offset = params[:page] + 1
-    # else
-    #   offset = params[:page]
-    # end
-    # offset = page + 5
-    @articles = Article.order("published DESC").page(params[:page]).per(5)
-    # respond_to do |format|
-    #   format.html
-    #   format.js
-    # end
-  end
-
-  def ajax_articles
-    @articles = Article.order("published DESC")
-    render json: @articles
+    @articles = Article.includes(:blog).order("published DESC").page(params[:page])
   end
 
   # GET /articles/1
