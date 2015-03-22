@@ -61,6 +61,8 @@ group :development, :test do
   gem 'sqlite3'
   gem 'pry-byebug'
   gem 'feedjira'
+  # N+1問題を発見する
+  gem 'bullet'
 end
 
 # production
