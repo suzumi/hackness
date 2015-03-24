@@ -473,6 +473,7 @@
 .section-intro {
     height: 700px;
     background-color: #fff;
+    overflow: hidden;
 }
 
 .section-intro > .container {
@@ -510,7 +511,6 @@
     position: relative;
     margin-top: 0;
     width: 980px;
-    overflow: hidden;
 }
 
 .section-recommend {
