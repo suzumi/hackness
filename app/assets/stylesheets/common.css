@@ -12,7 +12,9 @@
 }
 
 .navbar-brand,
-.section-intro h1 {
+.section-intro h1,
+.section-description h1,
+.section-recommend h1{
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -442,6 +444,7 @@
 
 /*新規登録*/
 .section-signup {
+    padding-top: 100px;
     height: 500px;
     /*background-image: url("/assets/signup.jpg");*/
     background-image: -webkit-gradient(
@@ -459,7 +462,7 @@
 }
 
 .section-signup > .container {
-    padding-top: 100px;
+    /*padding-top: 100px;*/
 }
 
 .section-sns {
@@ -482,8 +485,7 @@
 }
 
 .section-description {
-    height: 250px;
-    margin-bottom: 100px;
+    height: 300px;
     background-color: #f2f2f2;
     padding-top: 30px;
 }
@@ -509,6 +511,10 @@
     margin-top: 0;
     width: 980px;
     overflow: hidden;
+}
+
+.section-recommend {
+    height: 300px;
 }
 
 .btn-github > a,
@@ -553,6 +559,15 @@
 .btn-registration {
     width: 100%;
     height: 40px;
+    background-color: #ffbb05;
+    color: #fff;
+}
+
+.btn-getstarted {
+    border: 1px solid #ffb308;
+}
+
+.btn-getstarted:hover{
     background-color: #ffbb05;
     color: #fff;
 }
