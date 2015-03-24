@@ -1,9 +1,9 @@
 <div class="section-signup">
-<div class="container top-container">
+<div class="container">
   <div class="row">
-    <div class="col-sm-7">
-      <h3>いつも技術を身近に</h3>
-        <p>いつもアンテナしよう</p>
+    <div class="col-sm-7 top-intro">
+      <h1 class="title">Always, suck in knowledge</h1>
+        <h4>Hacknessは技術系ブログに特化したアンテナサイトです</h4>
     </div>
     <div class="main col-sm-5">
       <div class="row row-btn-github">
@@ -22,7 +22,7 @@
       </div>
       <div class="login-or">
         <hr class="hr-or">
-        <span class="span-or">or</span>
+        <!--<span class="span-or">or</span>-->
       </div>
 
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -36,16 +36,25 @@
             <%= f.password_field :password, autocomplete: "off", :class => 'form-control', :placeholder => 'パスワード' %>
         </div>
         <div class="registration">
-            <%= f.submit "Hacknessに登録する" , :class => 'btn btn-registration btn-success'%>
+            <%= f.submit "Hacknessに登録する" , :class => 'btn btn-registration'%>
         </div>
       <% end %>
     </div>
   </div>
 </div>
 </div>
+<div class="section-sns">
+  <div class="container">
+    Introduction
+  </div>
+</div>
 <div class="section-intro">
-    //
+  <div class="container">
+    Features
+  </div>
 </div>
 <div class="section-description">
-    //
+  <div class="container">
+
+  </div>
 </div>

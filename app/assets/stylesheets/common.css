@@ -1,14 +1,23 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
 /*Navbarにロゴ画像をいれるとズレる問題→背景に指定する*/
-.navbar-brand {
-    background: url("logo.png") no-repeat left center;
-    background-size: contain;
-    height: 50px;
-    width: 250px;
+/*.navbar-brand {*/
+    /*background: url("logo.png") no-repeat left center;*/
+    /*background-size: contain;*/
+    /*height: 50px;*/
+    /*width: 250px;*/
+/*}*/
+
+.top-intro {
+    color: #fff;
 }
 
-.top-container {
-    margin-top: 50px;
+.navbar-brand {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.top-intro > .title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 400%;
 }
 
 .article-aria-box {
@@ -292,6 +301,10 @@
     }
 }
 
+.article-container {
+    padding-top: 30px;
+}
+
 .article-name{
     font-size:14px;
     font-weight: bold;
@@ -305,7 +318,7 @@
 }
 
 .navbar-default {
-    background-color: #fff !important;
+    /*background-color: #b74661 !important;*/
 }
 
 .media-heading {
@@ -357,8 +370,8 @@
     background-color: #fff !important;
 }
 
-nav {
-    border-bottom-color: #9a6199 !important;
+.navbar {
+    margin: 0 !important;
 }
 
 .btn-more {
@@ -428,17 +441,40 @@ nav {
 
 /*新規登録*/
 .section-signup {
-    margin-bottom: 100px;
+    height: 500px;
+    /*background-image: url("/assets/signup.jpg");*/
+    background-image: -webkit-gradient(
+            linear,
+            right bottom,
+            right top,
+            color-stop(0, #7DA249),
+            color-stop(0.93, #D3EBA2)
+    );
+    background-image: -o-linear-gradient(top, #7DA249 0%, #D3EBA2 93%);
+    background-image: -moz-linear-gradient(top, #7DA249 0%, #D3EBA2 93%);
+    background-image: -webkit-linear-gradient(top, #7DA249 0%, #D3EBA2 93%);
+    background-image: -ms-linear-gradient(top, #7DA249 0%, #D3EBA2 93%);
+    background-image: linear-gradient(to top, #7DA249 0%, #D3EBA2 93%);
+}
+
+.section-signup > .container {
+    padding-top: 100px;
+}
+
+.section-sns {
+    height: 100px;
+    background-color: #ccd7db;
 }
 
 .section-intro {
     height: 500px;
-    background-color: #313131;
+    background-color: #fff;
 }
 
 .section-description {
     height: 600px;
     margin-bottom: 100px;
+    background-color: #f2f2f2;
 }
 
 .btn-github > a,
@@ -483,6 +519,8 @@ nav {
 .btn-registration {
     width: 100%;
     height: 40px;
+    background-color: #ffbb05;
+    color: #fff;
 }
 
 .login-or {
