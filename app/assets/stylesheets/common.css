@@ -444,8 +444,7 @@
 
 /*新規登録*/
 .section-signup {
-    /*padding-top: 100px;*/
-    height: 500px;
+    padding: 50px 0;
     /*background-image: url("/assets/signup.jpg");*/
     background-image: -webkit-gradient(
             linear,
@@ -461,17 +460,19 @@
     background-image: linear-gradient(to top, #7DA249 0%, #D3EBA2 93%);
 }
 
-.section-signup > .container {
-    /*padding-top: 100px;*/
+.section-signup .container {
+    top: 20%;
+    position: relative;
+    height: auto;
 }
 
 .section-sns {
-    height: 100px;
+    /*height: 100px;*/
     background-color: #ccd7db;
 }
 
 .section-intro {
-    height: 700px;
+    /*height: 700px;*/
     background-color: #fff;
     overflow: hidden;
 }
@@ -486,7 +487,7 @@
 }
 
 .section-description {
-    height: 300px;
+    /*height: 300px;*/
     background-color: #f2f2f2;
     padding-top: 30px;
 }
