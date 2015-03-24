@@ -444,7 +444,7 @@
 
 /*新規登録*/
 .section-signup {
-    padding-top: 100px;
+    /*padding-top: 100px;*/
     height: 500px;
     /*background-image: url("/assets/signup.jpg");*/
     background-image: -webkit-gradient(
