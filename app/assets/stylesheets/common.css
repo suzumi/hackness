@@ -11,7 +11,8 @@
     color: #fff;
 }
 
-.navbar-brand {
+.navbar-brand,
+.section-intro h1 {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -467,14 +468,47 @@
 }
 
 .section-intro {
-    height: 500px;
+    height: 700px;
     background-color: #fff;
 }
 
+.section-intro > .container {
+    height: 80%;
+}
+
+.section-intro > .container img{
+    margin-top: 0;
+    vertical-align: middle;
+}
+
 .section-description {
-    height: 600px;
+    height: 250px;
     margin-bottom: 100px;
     background-color: #f2f2f2;
+    padding-top: 30px;
+}
+
+.section-description .feature-box span {
+    color: #7DA249;
+}
+
+.section-description .fa-rss {
+    color: #ffb203;
+}
+
+.section-description .fa-folder-open {
+    color: #0db6ff;
+}
+
+.section-description .fa-calendar {
+    color: #ff4f3d;
+}
+
+.ss-large {
+    position: relative;
+    margin-top: 0;
+    width: 980px;
+    overflow: hidden;
 }
 
 .btn-github > a,
