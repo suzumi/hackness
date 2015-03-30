@@ -3,7 +3,7 @@
         <div class="col-md-4">
             <!-- 左側 -->
             <!-- <img src="http://dummyimage.com/200x200/000/fff"> -->
-            <img src="<%= @user.image%>" style="width:85px;">
+            <img class="img-rounded" src="<%= @user.image%>" style="width:85px;">
             <% if user_signed_in? %>
               <p><%= link_to 'プロフィール編集', edit_user_registration_path, :class => 'btn btn-default btn-xs' %></p>
             <% end %>
@@ -53,9 +53,10 @@
         </div>
     </div>
     <ul class="nav nav-tabs">
-        <li class="active"><a href="#" data-toggle="tab">クリップ</a></li>
-        <li ><a href="#" data-toggle="tab">スニペット</a></li>
-        <li ><a href="#" data-toggle="tab">フィードブログ</a></li>
+        <li class="active"><a href="#" data-toggle="tab">クリップ一覧</a></li>
+        <li ><a href="#" data-toggle="tab">スニペット一覧</a></li>
+        <li ><a href="#" data-toggle="tab">フィード中のブログ</a></li>
+        <li ><a href="#" data-toggle="tab">イベント情報</a></li>
     </ul>
 
 </div>
