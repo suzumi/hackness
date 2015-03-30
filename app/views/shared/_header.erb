@@ -36,9 +36,8 @@
                             <span><%= current_user.name %></span>
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">マイページ</a></li>
+                            <li><a href="users/<%= current_user.id %>">マイページ</a></li>
                             <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
-                            <li><a href="#">クリップ一覧</a></li>
                             <li class="divider"></li>
                             <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
                         </ul>
