@@ -1,5 +1,6 @@
 # require "feedbag"
 require "feedjira"
+before_action :authenticate_user!
 
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
@@ -82,5 +83,10 @@ class BlogsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
       params.require(:blog).permit(:name, :url, :feed)
+    end
+
+    def authenticate_user!
+      session[:user_return_to] = env['PATH_INFO']
+      redirect_to user_omniauth_authorize_path(:twitter) unless user_signed_in?
     end
 end

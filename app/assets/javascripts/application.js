@@ -15,4 +15,5 @@
 //= require bootstrap/dist/js/bootstrap.js
 //= require jquery_ujs
 //= require select2
+//= require jquery.glanceyear.min
 //= require_tree .
