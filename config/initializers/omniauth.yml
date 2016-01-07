@@ -17,9 +17,9 @@ roduction: &production
   mixi:
     key: xxxxxxxxxxx
     secret: XXXXXXXXXXXXXXXXXXXXXXXXX
-  twitter:
-    key: 1cQE5Mm59erYAtOFGXQi9sO4Z
-    secret: SpVvYg4BbUvEUNGKgtdghl7TQ5UIVY8y3qIGlAvRlhw01Ex6Zg
+  twitter: # removed This twitter application
+    key: xxxxxxxxxxxxxxxx
+    secret: xxxxxxxxxxxxxxxxxxxxxx
 
 development: &development
   <<: *production
